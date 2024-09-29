@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville"
+      rel="stylesheet"
+    /> -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      iframe {
+        width: 100%;
+        margin: auto;
+        display: block;
+        border: none;
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar Starts -->
+    <nav class="nav-bar">
+      <span id="menu"><i class="fa fa-bars"></i></span>
+      <div class="left">
+        <span id="close" class="fa fa-times"></span>
+        <a href="#Home">HOME</a>
+        <a href="About/index.html">ABOUT</a
+        ><a href="About/index2.html">BLOG</a
+        ><a href="Galleries/index.html">GALLERY</a
+        ><a href="Contact/contact.html">CONTACT</a>
+      </div>
+
+      <div class="middle">
+        <div class="logo">
+          <a href="#Home"><img src="img/logo1.png" alt="logo" /></a>
+        </div>
+      </div>
+
+      <div class="right">
+        <div>
+          <div class="fa fa-address-card"></div>
+          <div>
+            Address<br />
+            ...Location...
+          </div>
+        </div>
+        <div>
+          <div class="fa fa-phone"></div>
+          <div>
+            Phone<br />
+            9000000001
+          </div>
+        </div>
+        <div>
+          <div class="fa fa-clock-o" aria-hidden="true"></div>
+          <div>
+            Working Hours:<br />
+            Mon-Fri: 8am - 9pm
+          </div>
+        </div>
+      </div>
+    </nav>
+    <script>
+      document.getElementById("menu").addEventListener("click", function () {
+        document.querySelector(".nav-bar .left").style.width = "250px";
+      });
+      document.getElementById("close").addEventListener("click", function () {
+        console.log("called");
+        document.querySelector(".nav-bar .left").style.width = "0";
+      });
+    </script>
+    <!-- Navigation Bar ends -->
+
+    <section id="Home" class="home">
+      <div class="swiperes">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/slide.avif" alt=""></div>
+          <div class="swiper-slide"><img src="img/slide1.webp" alt=""></div>
+          <div class="swiper-slide"><img src="img/slide8.webp" alt=""></div>
+          <div class="swiper-slide"><img src="img/slide7.avif" alt=""></div>
+          <div class="swiper-slide"><img src="img/slide6.avif" alt=""></div>
+          <div class="swiper-slide"><img src="img/welcomePartImg.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/slide3.webp" alt=""></div>
+          <div class="swiper-slide"><img src="img/slide2.png" alt=""></div>
+          <div class="swiper-slide"><img src="img/slide9.jpeg" alt=""></div>
+          <div class="swiper-slide"><img src="img/slide4.jpg" alt=""></div>
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+      <div class="welcome-part">
+        <div class="line"><span></span></div>
+        <div style="font-family: serif" class="text">
+          <h1>
+            Welcome<br />
+            to our site
+          </h1>
+          <p>
+            Belle Fleur’s mission is to deliver a heartfelt planning experience
+            so you have a heart filled wedding day.
+          </p>
+          <p>
+            You can count on us to be calm, loving, hands-on and, most
+            importantly, professional throughout your entire planning process.
+          </p>
+          <button onclick="document.getElementById('About').scrollIntoView()" >View more...</button>
+        </div>
+        <img src="img/welcomePartImg.jpg" alt="Welcome-Image" />
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="scripts/home.js"></script>
+    </section>
+    <section>
+      <iframe
+        id="About"
+        scrolling="no"
+        title="About us"
+        src="About/index.html"
+      ></iframe>
+    </section>
+    <section>
+      <iframe
+        id="Blog"
+        scrolling="no"
+        title="Blogs"
+        src="About/index2.html"
+      ></iframe>
+    </section>
+    <section>
+      <iframe
+        id="Gallery"
+        src="Galleries/index.html"
+        scrolling="no"
+        title="Gallery"
+      ></iframe>
+    </section>
+    <section>
+      <iframe
+        id="Contact"
+        scrolling="no"
+        title="Contact us"
+        src="Contact/contact.html"
+      ></iframe>
+    </section>
+    <script>
+      var iframe = document.getElementsByTagName("iframe");
+
+      for (let i = 0; i < iframe.length; i++) {
+        iframe[i].onload = function () {
+          iframe[i].style.height =
+            iframe[i].contentWindow.document.body.scrollHeight + "px";
+        };
+      }
+      window.onresize = () => {
+        for (let i = 0; i < iframe.length; i++) {
+          iframe[i].style.height =
+            iframe[i].contentWindow.document.body.scrollHeight + "px";
+      }
+      }
+    </script>
+
+  </body>
+</html>

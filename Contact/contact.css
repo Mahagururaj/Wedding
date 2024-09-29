@@ -1,0 +1,146 @@
+.full {
+    width: 100%;
+    background-image: url("../img/slide4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact {
+    width: 60%;
+    height: auto;
+    margin-left: 20%;
+    padding: 5%;
+}
+
+.subtitle {
+    color: rgb(200, 196, 196);
+    font-weight: 100;
+}
+
+.inputBox {
+    border: none; /* Remove existing borders */
+    border-bottom: 1px solid rgb(170, 168, 168);
+    width: 50%;
+    height: 50px;
+    border-radius: 10px;
+    resize: none;
+    border-bottom-style: double;
+    padding: 10px; /* Add padding for better text placement */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.btnn {
+    width: 50%;
+    align-self: center;
+    background-color: #014e8d;
+    margin-bottom: 10px;
+    height: 50px;
+    border: transparent;
+    border-radius: 5px;
+    border: 2px solid rgb(148, 147, 147);
+    cursor: pointer; /* Change cursor to pointer for better UX */
+}
+
+.btnh4 {
+    font-weight: 650;
+    font-size: medium;
+    color: white;
+    margin: 0; /* Remove margin for better alignment */
+}
+
+.btnn:hover {
+    background-color: rgb(38, 118, 193);
+    color: rgb(101, 101, 101);
+}
+
+.ic {
+    width: 30px;
+    height: 30px;
+}
+
+.information {
+    font-weight: 400;
+}
+
+.header-container {
+    height: auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.093);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    text-align: center;
+}
+
+.header-title {
+    font-weight: 500;
+    font-family: 'Merienda', cursive;
+    color: rgb(95, 92, 92);
+    margin: 0;
+}
+
+.header-subtitle {
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(63, 61, 61);
+    margin: 5px 0;
+}
+
+/* Media queries for responsiveness */
+
+/* For tablets (up to 768px) */
+@media only screen and (max-width: 768px) {
+    .inputBox, .btnn {
+        width: 70%; /* Adjust width for tablets */
+    }
+
+    .contact {
+        width: 80%;
+        margin-left: 10%;
+        padding: 5%;
+    }
+
+    .header-title {
+        font-size: 1.5em; /* Adjust title size */
+    }
+    
+    .header-subtitle {
+        font-size: 1em; /* Adjust subtitle size */
+    }
+}
+
+/* For mobile devices (up to 480px) */
+@media only screen and (max-width: 480px) {
+    .inputBox, .btnn {
+        width: 90%; /* Full width for mobile */
+        height: 40px; /* Height adjustment */
+    }
+
+    .contact {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px; /* Padding adjustment */
+    }
+
+    .btnn {
+        height: 45px; /* Button height adjustment */
+    }
+
+    .btnh4 {
+        font-size: small; /* Button text size adjustment */
+    }
+
+    .header-title {
+        font-size: 1.2em; /* Title size for mobile */
+    }
+    
+    .header-subtitle {
+        font-size: 0.9em; /* Subtitle size for mobile */
+    }
+
+    .inputBox {
+        height: 100px; /* Increased height for textarea */
+    }
+}
